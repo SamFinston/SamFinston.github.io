@@ -1,0 +1,182 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    padding:0; 
+    margin:0;
+}
+
+#columns{
+    display: grid;
+    grid-template-columns: 256px 1fr 256px;
+    grid-template-rows: 75px 1fr;
+    height:100vh;
+}
+
+.leftCol, .rightCol{
+    background-color: rgb(238, 248, 253);
+}
+
+/* ---------------------------------- */
+/* ----------HEADER SECTION---------- */
+/* ---------------------------------- */
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #81D4FA;
+}
+
+#name{
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    font-family: baloo paaji;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    float: left;
+    padding-left: 30px;
+}
+
+/* ---------------------------------- */
+/* -------Left Column Section-------- */
+/* ---------------------------------- */
+
+/* Center everything in left column */ 
+.leftCol > *{
+    margin: auto;
+}
+
+#navBar{
+    position: sticky;
+    top: 35px;
+}
+
+#circleImage{
+    
+    margin: auto;
+    margin-top: 35px;
+    display: block;
+    border-radius: 50%;
+}
+
+ul{
+    display: block;
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    padding-top: 25px;
+    text-align: center;
+}
+
+li{
+    padding-top: 10px;
+}
+
+.navButton{
+    display: block;
+    color:white;
+    background-color:#55ccff;
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 20px;
+    font-family: baloo paaji;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+}
+
+.navButton:hover{
+    background-color: #80d5fa;
+}
+
+.leftCol{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+/* ---------------------------------- */
+/* ------Center Column Section------- */
+/* ---------------------------------- */
+
+.centerCol{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#bannerBox{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+#bannerBG{
+    position: absolute;
+    width: 100%;
+    
+}
+
+#bannerLogo{
+    position: absolute;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+    font-family: baloo paaji;
+    font-size: 3rem;
+    color: #4FC3F7;
+    margin-bottom: 0;
+}
+
+.centerCol > p{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 0;
+    text-align: justify;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ------Project Grid------- */
+
+#projects{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "one two three"
+    "four five six"
+    "seven eight nine";
+    align-items: center;
+    justify-items: stretch;
+}
+
+.projectThumb{
+    /* display: none; */
+}
+
+.projectModal{
+    display: none;
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+/* ---------------------------------- */
+/* -------Right Column Section------- */
+/* ---------------------------------- */
+
+.rightCol{
+    grid-column-start: 4;
+    grid-column-end: 3;
+}

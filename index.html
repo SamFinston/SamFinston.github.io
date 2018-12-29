@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Sam Finston</title>
+</head>
+<body>
+    
+    <div id="columns">
+        
+        <header>
+            <p id="name">Sam Finston // Game Developer & Poet</p>
+        </header>
+
+        <div class="column leftCol">
+            <div id="navBar">
+                <!-- Circular Portrait -->
+                <img id="circleImage" src="images/Me.jpg" alt="A portrait of the artist in his prime" height="200px" width="200px">
+
+                <!-- Buttons -->
+                <ul>
+                    <li><a class="navButton" href="#aboutAnchor">About</a></li>
+
+                    <li><a class="navButton" href="#skillsAnchor">Skills</a></li>
+
+                    <li><a class="navButton" href="#projectsAnchor">Projects</a></li>
+
+                    <li><a class="navButton" href="#contactAnchor">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="column centerCol">
+
+            <div id="bannerBox">
+                <img src="images/bannerGrid.png" id="bannerBG">
+                <img src="images/nuBanner.png" id="bannerLogo">
+            </div>
+
+            <h1 id="aboutAnchor">About Me</h1>
+
+            <p>
+                I like to write. Whether it's code, journalism, or poetry, you can be sure that I'm doing my best work. 
+                I'm currently pursuing a degree in Game Design and Development at the Rochester Institute of Technology, 
+                and I'm looking to gain industry experience in software development.
+            </p>
+
+            <p>
+                As a software developer, I solve problems with an ever-increasing toolkit. 
+                My coursework has me well-versed in languages from Java to JavaScript and C# to C++. 
+                Of course, I'm quick to pick up new skills, which I practice in both team and independent projects.
+            </p>
+
+            <p>
+                As a writer and game designer, I bring a new level of creativity to all the work I do. 
+                My writing has been featured in both print and online publications, 
+                and I was even chosen to perform a piece of my own on stage at the inaugural ceremony of RIT's current president.
+            </p>
+
+            <p>
+                As a student, I am a hard worker. I maintain a 4.0 GPA and Dean's List status. 
+                I am currently searching for a co-op for the summer of 2019. 
+                If you're interested in reaching out, you can contact me and check out my skills and projects below.
+            </p>
+
+            <h1 id="skillsAnchor">Skills</h1>
+
+            <p>
+                Languages: Proficient in C# and experienced in Java, JavaScript/HTML/CSS, Lua, and C++
+            </p>
+
+            <p>
+                Software: Unity, Visual Studio, MonoGame, Game Maker: Studio, Adobe Illustrator, Adobe Photoshop, Autodesk Maya
+            </p>
+
+            <p>
+                Writing: Creative, journalistic, and academic. Read my tech articles for RIT's Reporter Magazine 
+                <a href="https://reporter.rit.edu/users/sxf5282">here</a>
+            </p>
+
+            <a class="navButton" href="SamFinston_Resume.pdf">Resume</a>
+
+            <h1 id="projectsAnchor">Projects</h1>
+
+            <div id="projects">
+
+                <img class="projectThumb" id="thumb1" src="images/standoffThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb2" src="images/knightThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb3" src="images/gauntletThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectThumb" id="thumb4" src="images/scooberThumb.jpg" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb5" src="images/VRntThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb6" src="images/sugarplumThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectThumb" id="thumb7" src="images/antiquaThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb8" src="images/InaugThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectThumb" id="thumb9" src="images/shapeshiftThumb.jpg" alt="Project Thumbnail" width="100%">
+
+                <img class="projectModal" id="modal1" src="images/standoffThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal2" src="images/knightThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal3" src="images/gauntletThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectModal" id="Modal4" src="images/scooberThumb.jpg" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal5" src="images/VRntThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal6" src="images/sugarplumThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectModal" id="Modal7" src="images/antiquaThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal8" src="images/InaugThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal9" src="images/shapeshiftThumb.jpg" alt="Project Thumbnail" width="100%">
+
+
+            </div>
+
+            <h1 id="contactAnchor">Contact</h1>
+
+        </div>
+
+        <div class="column rightCol">
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <!-- <script>
+            // Get the modal
+            var modal = document.getElementById('modal1');
+            
+            // Get the button that opens the modal
+            var thumb = document.getElementById("thumb1");
+
+            var thumbs = document.getElementsByClassName("projectThumb");
+            //console.log(thumbs);
+            var modals = document.getElementsByClassName("projectModal");
+            //console.log(modals);
+
+            //
+            function openModal(index)
+            {
+                var i;
+                for (i = 0; i < thumbs.length; i++) 
+                {
+                    thumbs[i].style.display = "none";
+                }
+                modals[i].style.display = "block";
+            }
+            
+            //Closes modal and reopens
+            function closeModal()
+            {
+                var i;
+                for (i = 0; i < thumbs.length; i++) 
+                {
+                    thumbs[i].style.display = "block";
+                }
+                modals[i].style.display = "none";
+            }
+            
+            // Goes through all thumbs and modals and sets event listeners
+            var j;
+            for(j = 0; j < thumbs.length; j++)
+            {
+                thumbs[j].addEventListener("click", openModal(j));
+                modals[j].addEventListener("click", closeModal());
+                //console.log(thumbs[j]);
+                //console.log(modals[j]);
+            }
+
+            // thumb.onclick = function() 
+            // {
+            //     var i;
+            //     for (i = 0; i < thumbs.length; i++) 
+            //     {
+            //         thumbs[i].style.display = "none";
+            //     }
+            //     modal.style.display = "block";
+            // }
+
+            // modal.onclick = function()
+            // {
+            //     var i;
+            //     for (i = 0; i < thumbs.length; i++) 
+            //     {
+            //         thumbs[i].style.display = "block";
+            //     }
+            //     modal.style.display = "none";
+            // }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function(event) 
+            // {
+            //     if (event.target == modal) 
+            //     {
+            //         modal.style.display = "none";
+            //     }
+            // }
+            
+            </script> -->
+
+</body>
+</html>
