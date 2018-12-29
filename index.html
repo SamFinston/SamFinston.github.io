@@ -136,80 +136,44 @@
     </div>
 
     <!-- JavaScript -->
-    <!-- <script>
-            // Get the modal
-            var modal = document.getElementById('modal1');
-            
-            // Get the button that opens the modal
-            var thumb = document.getElementById("thumb1");
+    <script>
+            "use strict";
 
-            var thumbs = document.getElementsByClassName("projectThumb");
-            //console.log(thumbs);
-            var modals = document.getElementsByClassName("projectModal");
-            //console.log(modals);
+            //Reference to all project thumbnails
+            let thumbs = document.getElementsByClassName("projectThumb");
+            //Reference to all project modals
+            let modals = document.getElementsByClassName("projectModal");
 
-            //
+            //Closes all thumbnails and opens a modal
             function openModal(index)
             {
-                var i;
-                for (i = 0; i < thumbs.length; i++) 
+                console.log("open sesame");
+                for (let i = 0; i < thumbs.length; i++) 
                 {
                     thumbs[i].style.display = "none";
                 }
-                modals[i].style.display = "block";
+                modals[index].style.display = "block";
             }
             
-            //Closes modal and reopens
-            function closeModal()
+            //Closes modal and reopens all thumbnails
+            function closeModal(index)
             {
-                var i;
-                for (i = 0; i < thumbs.length; i++) 
+                for (let i = 0; i < thumbs.length; i++) 
                 {
                     thumbs[i].style.display = "block";
+                    
                 }
-                modals[i].style.display = "none";
+                modals[index].style.display = "none";
             }
             
             // Goes through all thumbs and modals and sets event listeners
-            var j;
-            for(j = 0; j < thumbs.length; j++)
+            for(let j = 0; j < thumbs.length; j++)
             {
-                thumbs[j].addEventListener("click", openModal(j));
-                modals[j].addEventListener("click", closeModal());
-                //console.log(thumbs[j]);
-                //console.log(modals[j]);
+                thumbs[j].addEventListener("click", function(){     openModal(j)    });
+                modals[j].addEventListener("click", function(){     closeModal(j)   });
             }
-
-            // thumb.onclick = function() 
-            // {
-            //     var i;
-            //     for (i = 0; i < thumbs.length; i++) 
-            //     {
-            //         thumbs[i].style.display = "none";
-            //     }
-            //     modal.style.display = "block";
-            // }
-
-            // modal.onclick = function()
-            // {
-            //     var i;
-            //     for (i = 0; i < thumbs.length; i++) 
-            //     {
-            //         thumbs[i].style.display = "block";
-            //     }
-            //     modal.style.display = "none";
-            // }
             
-            // When the user clicks anywhere outside of the modal, close it
-            // window.onclick = function(event) 
-            // {
-            //     if (event.target == modal) 
-            //     {
-            //         modal.style.display = "none";
-            //     }
-            // }
-            
-            </script> -->
+            </script>
 
 </body>
 </html>
