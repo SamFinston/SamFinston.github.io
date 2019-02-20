@@ -23,7 +23,7 @@
     <div id="columns">
         
         <header>
-            <p id="name">Website in Progress</p>
+            <p id="name">Sam Finston // Game Developer & Poet</p>
         </header>
 
         <div class="column leftCol">
@@ -47,8 +47,8 @@
         <div class="column centerCol">
 
             <div id="bannerBox">
-                <img src="images/smallGrid.png" id="bannerBG">
-                <img src="images/smallBanner.png" id="bannerLogo">
+                <img src="images/bannerGrid.png" id="bannerBG">
+                <img src="images/nuBanner.png" id="bannerLogo">
             </div>
 
             <h1 id="aboutAnchor">About Me</h1>
@@ -57,6 +57,24 @@
                 I like to write. Whether it's code, journalism, or poetry, you can be sure that I'm doing my best work. 
                 I'm currently pursuing a degree in Game Design and Development at the Rochester Institute of Technology, 
                 and I'm looking to gain industry experience in software development.
+            </p>
+
+            <p>
+                As a software developer, I solve problems with an ever-increasing toolkit. 
+                My coursework has me well-versed in languages from Java to JavaScript and C# to C++. 
+                Of course, I'm quick to pick up new skills, which I practice in both team and independent projects.
+            </p>
+
+            <p>
+                As a writer and game designer, I bring a new level of creativity to all the work I do. 
+                My writing has been featured in both print and online publications, 
+                and I was even chosen to perform a piece of my own on stage at the inaugural ceremony of RIT's current president.
+            </p>
+
+            <p>
+                As a student, I am a hard worker. I maintain a 4.0 GPA and Dean's List status. 
+                I am currently searching for a co-op for the summer of 2019. 
+                If you're interested in reaching out, you can contact me and check out my skills and projects below.
             </p>
 
             <h1 id="skillsAnchor">Skills</h1>
@@ -79,40 +97,63 @@
             <h1 id="projectsAnchor">Projects</h1>
 
             <div id="projects">
-                <!-- Thumbnails -->
-                <img class="projectThumb" id="thumb1" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb2" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb3" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
 
-                <img class="projectThumb" id="thumb4" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb5" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb6" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-
-                <img class="projectThumb" id="thumb7" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb8" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectThumb" id="thumb9" src="images/sampleThumb.jpg" alt="Project Thumbnail" >
-
-                <!-- Modals -->
-                <div class="projectModal" id="modal1" >
-                    <div class="modalContent">
-                        <div class="modalHeader">
-                            <p>Stellar Standoff</p>
-                        </div>
-                        <div class="modalBody">
-                                <p>Lorem Ipsum</p>
-                        </div>
-                    </div>
+                <img class="projectThumb" id="thumb1" src="images/knightMoveThumb.png" alt="Project Thumbnail" width="100%">
+                <div class="projectThumb info" id="thumb2">
+                    <h2>Knight Move 3D</h2>
+                    <p>
+                        A 3D recreation of Alexey Pajitnov's 1990 puzzle game "Knight Move." Programmed by a team of three using C++ in an OpenGL-based engine.
+                        Check out the code on GitHub <a href="https://github.com/MAClavell/Knight-Move-3D">here</a>.
+                    </p>
                 </div>
-                <!-- <img class="projectModal" id="Modal2" src="images/knightThumb.png" alt="Project Thumbnail" >
-                <img class="projectModal" id="Modal3" src="images/gauntletThumb.png" alt="Project Thumbnail" >
 
-                <img class="projectModal" id="Modal4" src="images/scooberThumb.jpg" alt="Project Thumbnail" >
-                <img class="projectModal" id="Modal5" src="images/VRntThumb.png" alt="Project Thumbnail" >
-                <img class="projectModal" id="Modal6" src="images/sugarplumThumb.png" alt="Project Thumbnail" >
+                <img class="projectThumb" id="thumb3" src="images/VRntThumb.png" alt="Project Thumbnail" width="100%">
+                <div class="projectThumb info" id="thumb4">
+                    <h2>VRn't</h2>
+                    <p>
+                        A satirical arcade game playable in browser. This game was made in Unity over 72 hours in a team of four for the Ludum Dare 41 game jam, 
+                        where it ranked among the top 20 games in "Humor." I helped program and design. Give it a whirl on itch.io <a href="https://joms.itch.io/vrnt">here</a>,
+                        or check out its competition page <a href="https://ldjam.com/events/ludum-dare/41/vrnt">here</a>.
+                    </p>
+                </div>
 
-                <img class="projectModal" id="Modal7" src="images/antiquaThumb.png" alt="Project Thumbnail" >
-                <img class="projectModal" id="Modal8" src="images/InaugThumb.png" alt="Project Thumbnail" >
-                <img class="projectModal" id="Modal9" src="images/shapeshiftThumb.jpg" alt="Project Thumbnail" > -->
+                <img class="projectThumb" id="thumb5" src="images/scooberThumb.jpg" alt="Project Thumbnail" width="100%">
+                <div class="projectThumb info" id="thumb6">
+                    <h2>Space Station Scoober</h2>
+                    <p>
+                        An experimental action arcade game playable in browser. Built in the game engine Pico-8. Play it right over <a href="https://people.rit.edu/sxf5282/portfolio/spacestationscoober.html">here</a>.
+                    </p>
+                </div>
+
+                <img class="projectThumb" id="thumb7" src="images/sugarplumThumb.png" alt="Project Thumbnail" width="100%">
+                <div class="projectThumb info" id="thumb8">
+                    <h2>Sugarplum Summit</h2>
+                    <p>
+                            A "shoot 'em up" game playable in browser. This game was made in Unity originally over 72 hours in a team of three for the 
+                            Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game. Play it on itch.io
+                            <a href="https://joms.itch.io/sugarplum-summit">here</a> or check out the competition page <a href="https://ldjam.com/events/ludum-dare/40/sugarplum-summit">here</a>.
+                    </p>
+                </div>
+
+                <img class="projectThumb" id="thumb9" src="images/antiquaThumb.png" alt="Project Thumbnail" width="100%">
+                <div class="projectThumb info" id="thumb10">
+                    <h2>Antiqua</h2>
+                    <p>
+                            An illustrated self-published collection of my poetry. Available for purchase online in a digital format at <a href="https://coolsummit.itch.io/antiqua">itch.io</a>. 
+                    </p>
+                </div>
+
+                <!-- <img class="projectModal" id="modal1" src="images/standoffThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal2" src="images/knightThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal3" src="images/gauntletThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectModal" id="Modal4" src="images/scooberThumb.jpg" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal5" src="images/VRntThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal6" src="images/sugarplumThumb.png" alt="Project Thumbnail" width="100%">
+
+                <img class="projectModal" id="Modal7" src="images/antiquaThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal8" src="images/InaugThumb.png" alt="Project Thumbnail" width="100%">
+                <img class="projectModal" id="Modal9" src="images/shapeshiftThumb.jpg" alt="Project Thumbnail" width="100%"> -->
 
 
             </div>
@@ -128,43 +169,80 @@
     </div>
 
     <!-- JavaScript -->
-    <script>
-            "use strict";
+    <!-- <script>
+            // Get the modal
+            var modal = document.getElementById('modal1');
+            
+            // Get the button that opens the modal
+            var thumb = document.getElementById("thumb1");
 
-            //Reference to all project thumbnails
-            let thumbs = document.getElementsByClassName("projectThumb");
-            //Reference to all project modals
-            let modals = document.getElementsByClassName("projectModal");
+            var thumbs = document.getElementsByClassName("projectThumb");
+            //console.log(thumbs);
+            var modals = document.getElementsByClassName("projectModal");
+            //console.log(modals);
 
-            //Closes all thumbnails and opens a modal
+            //
             function openModal(index)
             {
-                console.log("open sesame");
-                for (let i = 0; i < thumbs.length; i++) 
+                var i;
+                for (i = 0; i < thumbs.length; i++) 
                 {
                     thumbs[i].style.display = "none";
                 }
-                modals[index].style.display = "block";
+                modals[i].style.display = "block";
             }
             
-            //Closes modal and reopens all thumbnails
-            function closeModal(index)
+            //Closes modal and reopens
+            function closeModal()
             {
-                for (let i = 0; i < thumbs.length; i++) 
+                var i;
+                for (i = 0; i < thumbs.length; i++) 
                 {
                     thumbs[i].style.display = "block";
                 }
-                modals[index].style.display = "none";
+                modals[i].style.display = "none";
             }
             
             // Goes through all thumbs and modals and sets event listeners
-            for(let j = 0; j < thumbs.length; j++)
+            var j;
+            for(j = 0; j < thumbs.length; j++)
             {
-                thumbs[j].addEventListener("click", function(){     openModal(j)    });
-                modals[j].addEventListener("click", function(){     closeModal(j)   });
+                thumbs[j].addEventListener("click", openModal(j));
+                modals[j].addEventListener("click", closeModal());
+                //console.log(thumbs[j]);
+                //console.log(modals[j]);
             }
+
+            // thumb.onclick = function() 
+            // {
+            //     var i;
+            //     for (i = 0; i < thumbs.length; i++) 
+            //     {
+            //         thumbs[i].style.display = "none";
+            //     }
+            //     modal.style.display = "block";
+            // }
+
+            // modal.onclick = function()
+            // {
+            //     var i;
+            //     for (i = 0; i < thumbs.length; i++) 
+            //     {
+            //         thumbs[i].style.display = "block";
+            //     }
+            //     modal.style.display = "none";
+            // }
             
-            </script>
+            // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function(event) 
+            // {
+            //     if (event.target == modal) 
+            //     {
+            //         modal.style.display = "none";
+            //     }
+            // }
+            
+            </script> -->
 
 </body>
 </html>
