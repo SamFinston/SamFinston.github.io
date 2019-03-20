@@ -9,8 +9,8 @@ body{
 
 #columns{
     display: grid;
-    grid-template-columns: 256px 1fr 256px;
-    grid-template-rows: 75px 1fr;
+    grid-template-columns: 1fr 80% 1fr; /* 150 */
+    grid-template-rows: 1fr;
     height:100vh;
 }
 
@@ -18,26 +18,68 @@ body{
     background-color: rgb(238, 248, 253);
 }
 
+.projectInfo > a, .projectInfo > a:visited{
+    text-decoration: none;
+    font-family: Viga;
+    color: rgb(67, 156, 230);
+}
+
 /* ---------------------------------- */
 /* ----------HEADER SECTION---------- */
 /* ---------------------------------- */
 
 header{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    position: fixed;
+    top: 0;
+    height: 55px;
+    width: 100%;
     background-color: #81D4FA;
+    /* display: none; */
+    opacity: 0;
 }
 
 #name{
     padding: 0;
     margin: 0;
-    padding-top: 5px;
+    padding-top: 0;
     font-family: baloo paaji;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
     float: left;
     padding-left: 30px;
+}
+
+#top_nav{
+    padding: 0;
+    margin: 0;
+    padding-top: 0;
+    font-family: baloo paaji;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    float: right;
+    padding-right: 30px;
+}
+
+.page_link{
+    color: inherited;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.page_link:visited{
+    color: white;
+}
+
+.fadeIn{
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.fadeOut{
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 
 /* ---------------------------------- */
@@ -55,11 +97,12 @@ header{
 }
 
 #circleImage{
-    
-    margin: auto;
-    margin-top: 35px;
+    /* margin: auto; */
+    /* margin-top: 35px; */
     display: block;
     border-radius: 50%;
+    width: 50%;
+    height: 50%;
 }
 
 ul{
@@ -79,14 +122,14 @@ li{
     display: block;
     color:white;
     background-color:#55ccff;
-    width: 100px;
-    padding-top: 5px;
-    padding-bottom: 3px;
-    border-radius: 20px;
+    width: 150px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    border-radius: 40px;
     font-family: baloo paaji;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     text-decoration: none;
-    margin: auto;
+    /* margin: auto; */
     text-align: center;
 }
 
@@ -114,20 +157,40 @@ li{
     left: 0;
     height: 100vh;
     width: 100%;
-}
-
-#bannerBG{
-    position: absolute;
-    width: 100%;
     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("images/grid.svg"), linear-gradient(#81D4FA, white);
+    background-size: 5%;
 }
 
-#bannerLogo{
-    position: absolute;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10%;
-    width: 80%;
+#flexLogo{
+    width: 70%;
+    /* margin-top: 5%; */
+}
+
+#flexButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    /* border: 1px solid black; */
+}
+
+/* #centerButton{
+    margin-left: 50px;
+    margin-right: 50px;
+} */
+
+#info, #skills{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 h1{
@@ -136,31 +199,72 @@ h1{
     font-size: 3rem;
     color: #4FC3F7;
     margin-bottom: 0;
+    padding-top: 55px;
 }
 
-.centerCol > p{
-    padding-left: 10%;
-    padding-right: 10%;
+.projectInfo, #blurb, .skills{
     margin-top: 0;
-    text-align: justify;
+    text-align: left;
     font-size: 1.1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#aboutBox{
+    padding-left: 3%;
+    padding-top: 5%;
+}
+
+.projectInfo{
+    text-align: center;
+}
+
+#skills{
+    margin-top: 30px;
+}
+
+#resume{
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    background-color:#55ccff;
+    margin-left: 3%;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    font-family: baloo paaji;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#resume:hover{
+    background-color: #80d5fa;
 }
 
 /* ------Project Grid------- */
 
 #projects{
     width: 100%;
-    display: grid;
-    grid-template-columns: 275px 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-/* .projectThumb{
-    display: none;
-} */
+#projects > div{
+    width: 45%;
+    text-align: center;
+}
+
+.projectThumb{
+    width: 100%;
+    height: auto;
+}
 
 .info{
     /* border: 1px solid black; */
@@ -175,13 +279,31 @@ h1{
 h2{
     font-family: Viga;
     margin-top: 0;
-    color: rgb(67, 156, 230)
+    margin-bottom: 0;
+    color: rgb(67, 156, 230);
 }
 
-.projectModal{
-    display: none;
-    grid-column: span 3;
-    grid-row: span 3;
+#contactIcons{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.icon{
+    padding-left: 10px;
+    padding-right: 10px;
+    /* color: rgb(67, 156, 230); */
+    color: #4FC3F7;
+    text-decoration: none;
+}
+
+.icon:hover, .icon:visited:hover{
+    /* color: #4FC3F7; */
+    color: rgb(67, 156, 230);
+}
+
+.icon:visited{
+    /* color: rgb(67, 156, 230); */
+    color: #4FC3F7;
 }
 
 /* ---------------------------------- */
