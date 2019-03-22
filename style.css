@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body{
     padding:0; 
@@ -34,7 +34,6 @@ header{
     height: 55px;
     width: 100%;
     background-color: #81D4FA;
-    /* display: none; */
     opacity: 0;
 }
 
@@ -63,7 +62,7 @@ header{
 }
 
 .page_link{
-    color: inherited;
+    color: white;
     text-decoration: none;
     padding-left: 20px;
 }
@@ -82,76 +81,14 @@ header{
     opacity: 0;
 }
 
-/* ---------------------------------- */
-/* -------Left Column Section-------- */
-/* ---------------------------------- */
-
-/* Center everything in left column */ 
-.leftCol > *{
-    margin: auto;
-}
-
-#navBar{
-    position: sticky;
-    top: 35px;
-}
-
-#circleImage{
-    /* margin: auto; */
-    /* margin-top: 35px; */
-    display: block;
-    border-radius: 50%;
-    min-width: 200px;
-    max-width: 200px;
-    max-height: 200px;
-    min-height: 200px;
-}
-
-ul{
-    display: block;
-    list-style-type: none;
-    margin: 0; 
-    padding: 0;
-    padding-top: 25px;
-    text-align: center;
-}
-
-li{
-    padding-top: 10px;
-}
-
-.navButton{
-    display: block;
-    color:white;
-    background-color:#55ccff;
-    width: 150px;
-    padding-top: 15px;
-    padding-bottom: 12px;
-    border-radius: 40px;
-    font-family: baloo paaji;
-    font-size: 1.75rem;
-    text-decoration: none;
-    /* margin: auto; */
-    text-align: center;
-}
-
-.navButton:hover{
-    background-color: #80d5fa;
-}
-
-.leftCol{
-    grid-column-start: 1;
-    grid-column-end: 2;
+.inactive{
+    pointer-events: none;
+    cursor: default;
 }
 
 /* ---------------------------------- */
-/* ------Center Column Section------- */
+/* ---------Banner Section----------- */
 /* ---------------------------------- */
-
-.centerCol{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
 
 #bannerBox{
     position: relative;
@@ -186,6 +123,42 @@ li{
     margin-left: 50px;
     margin-right: 50px;
 } */
+
+.navButton{
+    display: block;
+    color:white;
+    background-color:#55ccff;
+    width: 150px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    border-radius: 40px;
+    font-family: baloo paaji;
+    font-size: 1.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navButton:hover{
+    background-color: #80d5fa;
+}
+
+/* ---------------------------------- */
+/* ------Center Column Section------- */
+/* ---------------------------------- */
+
+.centerCol{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#circleImage{
+    display: block;
+    border-radius: 50%;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+}
 
 #info, #skills{
     display: flex;
@@ -317,8 +290,13 @@ h2{
 }
 
 /* ---------------------------------- */
-/* -------Right Column Section------- */
+/* -------Side Columns Section------- */
 /* ---------------------------------- */
+
+.leftCol{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 
 .rightCol{
     grid-column-start: 4;
