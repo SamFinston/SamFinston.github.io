@@ -103,7 +103,7 @@ header{
     justify-content: center;
 
     background-image: url("images/grid.svg"), linear-gradient(#81D4FA, white);
-    background-size: 5%;
+    background-size: 5%, 100%;
 }
 
 #flexLogo{
