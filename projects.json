@@ -14,7 +14,7 @@
         "thumbnail": "https://samfinston.github.io/images/VRntThumb.png",
         "date" : ["April", 4, 2018],
         "tags": ["game", "jam", "team", "unity", "c#"],
-        "description": "A satirical arcade game playable in browser. Made in Unity over 72 hours in a team of four for the Ludum Dare 41 game jam, where it ranked among the top 20 games in "Humor."",
+        "description": "A satirical arcade game playable in browser. Made in Unity over 72 hours in a team of four for the Ludum Dare 41 game jam, where it ranked among the top 20 games in 'Humor.'",
         "links": {
             "play": "https://joms.itch.io/vrnt"
         }
