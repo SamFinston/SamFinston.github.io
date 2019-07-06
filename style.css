@@ -35,6 +35,16 @@ header{
     width: 100%;
     background-color: #81D4FA;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown{
+    height: 220px;
+    font-family: baloo paaji;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
 }
 
 #name{
@@ -84,6 +94,33 @@ header{
 .inactive{
     pointer-events: none;
     cursor: default;
+}
+
+/* #dropdown_items{
+    border: 1px solid black;
+} */
+
+.mobile_nav_inactive{
+    display: none;
+}
+
+.mobile_nav_active{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#initials{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+    height: 80%;
+}
+
+#hamburger:hover, #close:hover{
+    cursor: pointer;
 }
 
 /* ---------------------------------- */
@@ -301,4 +338,62 @@ h2{
 .rightCol{
     grid-column-start: 4;
     grid-column-end: 3;
+}
+
+/* ---------------------------------- */
+/* ----------Mobile Styles----------- */
+/* ---------------------------------- */
+
+@media (max-width: 768px){
+    #columns{
+        grid-template-columns: 0 100% 0;
+    }
+
+    h1{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #flexButtons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navButton{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #projects > div{
+        width: 95%;
+        text-align: center;
+    }
+
+    #info, #skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills{
+        flex-direction: column-reverse;
+        margin-top: 0px;
+    }
+
+    #resume{
+        margin-bottom: 20px;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    #initials, #hamburger{
+        display: block;
+        padding-left: 0;
+    }
+
+    header > div:first-child{
+        height: 40px;
+    }
+
 }

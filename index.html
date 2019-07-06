@@ -17,7 +17,7 @@
     <!-- Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Preview -->
     <meta property="og:image" content="images/SitePreview.gif">
@@ -59,7 +59,7 @@
                         <a href="https://github.com/MAClavell/Knight-Move-3D">>GitHub</a>
                     </p>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div>
                     <img class="projectThumb" src="images/VRntThumb.png" alt="Project Thumbnail">
@@ -116,13 +116,13 @@
                 <div>
                     <p class="skills">
                         <u>Languages</u>:
-                        Proficient in C# and experienced in Java, JavaScript/HTML/CSS, Lua, and C++
+                        Proficient in C# and experienced in Java, JavaScript/HTML/CSS, Lua, C++, and Swift
                     </p>
 
                     <p class="skills">
                         <u>Software</u>:
                         Unity, Visual Studio, MonoGame, Game Maker: Studio, Adobe Illustrator, Adobe Photoshop,
-                        Autodesk Maya
+                        Autodesk Maya, Xcode
                     </p>
 
                     <p class="skills">
@@ -165,15 +165,28 @@
 
     <!-- Header -->
     <header class="inactive">
-        <p id="name">
-            <a class="page_link" href="#topAnchor">Sam Finston // Game Developer & Poet</a>
-        </p>
+        <div>
+            <p id="name">
+                <a class="page_link desktop" href="#topAnchor">Sam Finston // Game Developer & Poet</a>
+                <a class="page_link" id="initials" href="#topAnchor">SF</a>
+            </p>
 
-        <p id="top_nav">
-            <a class="page_link"href="#projectsAnchor">Projects</a> 
-            <a class="page_link" href="#aboutAnchor">About</a> 
+            <p id="top_nav">
+                <a class="page_link desktop" href="#projectsAnchor">Projects</a>
+                <a class="page_link desktop" href="#aboutAnchor">About</a>
+                <a class="page_link desktop" href="#contactAnchor">Contact</a>
+                <a class="page_link desktop" id="hamburger">
+                    <i id="mobileIcon" class="fas fa-bars fa-1x"></i>
+                </a>
+            </p>
+        </div>
+
+        <div id="dropdown_items" class="mobile_nav_inactive">
+            <a class="page_link" href="#projectsAnchor">Projects</a>
+            <a class="page_link" href="#aboutAnchor">About</a>
             <a class="page_link" href="#contactAnchor">Contact</a>
-        </p>
+        </div>
+
     </header>
 
     <!-- JavaScript -->
@@ -182,11 +195,18 @@
         window.onload = init;
         let offset;
         let header;
+        let icon;
+        let dropDownItems;
+        let dropdownOpen = false
 
         function init() {
             let content = document.querySelector(".navButton");
             offset = content.offsetTop;
             header = document.querySelector("header");
+
+            icon = document.querySelector("#mobileIcon");
+            dropDownItems = document.querySelector("#dropdown_items")
+            document.querySelector("#hamburger").addEventListener("click", toggleDropdown);
 
             window.onscroll = toggleHeader;
         }
@@ -201,6 +221,35 @@
                 header.classList.add('fadeOut');
                 header.classList.add('inactive');
             }
+        }
+
+        function toggleDropdown() {
+            if (dropdownOpen) closeDropdown()
+            else openDropdown()
+        }
+
+        function openDropdown() {
+            dropdownOpen = true;
+
+            header.classList.add('dropdown');
+
+            dropDownItems.classList.remove('mobile_nav_inactive')
+            dropDownItems.classList.add('mobile_nav_active')
+
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+
+        function closeDropdown() {
+            dropdownOpen = false;
+
+            header.classList.remove('dropdown');
+
+            dropDownItems.classList.remove('mobile_nav_active')
+            dropDownItems.classList.add('mobile_nav_inactive')
+
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         }
 
     </script>

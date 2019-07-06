@@ -38,5 +38,65 @@
         "links": {
             "store": "https://coolsummit.itch.io/antiqua"
         }
+    },
+    {
+        "name": "Sugarplum Summit",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["December", 12, 2017],
+        "tags": ["game", "jam", "team", "unity", "c#"],
+        "description": "A 'shoot 'em up' game playable in browser. This game was made in Unity originally over 72 hours in a team of three for the Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game.",
+        "links": {
+            "play": "https://joms.itch.io/sugarplum-summit"
+        }
+    },
+    {
+        "name": "Shapeshift Crypt",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["May", 5, 2017],
+        "tags": ["game", "class", "team", "c#"],
+        "description": "A 'Binding of Isaac' styled game created over a semester in a group of four students with the Monogame game engine. I was responsible for all visual aspects of the game (UI, sprite work, art direction, animation, graphics programming) and assisted in gameplay design.",
+        "links": {
+            
+        }
+    },
+    {
+        "name": "Stellar Standoff",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["November", 11, 2018],
+        "tags": ["game", "class", "team", "unity", "c#", "mobile"],
+        "description": "A party game for mobile devices. Developed by a team of six in Unity with C# for a class project.",
+        "links": {
+            
+        }
+    },
+    {
+        "name": "That's Movies",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["June", 6, 2019],
+        "tags": ["app", "mobile", "solo", "xcode", "swift"],
+        "description": "",
+        "links": {
+            
+        }
+    },
+    {
+        "name": "Web Audio",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["February", 2, 2019],
+        "tags": ["app", "web", "class", "solo", "javascript"],
+        "description": "",
+        "links": {
+            
+        }
+    },
+    {
+        "name": "Port Authority",
+        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "date" : ["May", 5, 2019],
+        "tags": ["app", "web", "class", "solo", "javascript"],
+        "description": "",
+        "links": {
+            
+        }
     }
   ]
