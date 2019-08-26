@@ -10,6 +10,9 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- JS -->
+    <script src="main.js"></script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
@@ -103,9 +106,10 @@
                 <img src="images/self.jpg" id="circleImage">
                 <div id="aboutBox">
                     <p id="blurb">
-                        I like to write. Whether it's code, journalism, or poetry, you can be sure that I'm doing my
-                        best work. I'm currently pursuing a degree in Game Design and Development at the Rochester
-                        Institute of Technology, and I'm looking to gain industry experience in software development.
+                        I like to create. Whether it's a game, a website, or a poem, you can be sure that I'm doing my
+                        best work. I'm currently finishing up my degree in Game Design and Development at the Rochester
+                        Institute of Technology, and I'm looking to jump right into the industry this January. If you're
+                        looking for an experienced programmer with a knack for design and writing, drop me a line!
                     </p>
                 </div>
 
@@ -116,7 +120,7 @@
                 <div>
                     <p class="skills">
                         <u>Languages</u>:
-                        Proficient in C# and experienced in Java, JavaScript/HTML/CSS, Lua, C++, and Swift
+                        Proficient in C# and experienced in C++, JavaScript, HTML/CSS, Java, Lua, and Swift
                     </p>
 
                     <p class="skills">
@@ -127,8 +131,8 @@
 
                     <p class="skills">
                         <u>Writing</u>:
-                        Creative, journalistic, and academic. Read my tech articles for RIT's Reporter Magazine
-                        <a href="https://reporter.rit.edu/users/sxf5282">here</a>
+                        Creative, journalistic, and academic. Read one of my tech articles for RIT's Reporter Magazine
+                        <a id="reporter_link" href="https://reporter.rit.edu/tech/google-assisted-future">here</a>
                     </p>
                 </div>
 
@@ -188,71 +192,6 @@
         </div>
 
     </header>
-
-    <!-- JavaScript -->
-    <script>
-        "use strict";
-        window.onload = init;
-        let offset;
-        let header;
-        let icon;
-        let dropDownItems;
-        let dropdownOpen = false
-
-        function init() {
-            let content = document.querySelector(".navButton");
-            offset = content.offsetTop;
-            header = document.querySelector("header");
-
-            icon = document.querySelector("#mobileIcon");
-            dropDownItems = document.querySelector("#dropdown_items")
-            document.querySelector("#hamburger").addEventListener("click", toggleDropdown);
-
-            window.onscroll = toggleHeader;
-        }
-
-        function toggleHeader() {
-            if (window.pageYOffset > offset) {
-                header.classList.remove('fadeOut');
-                header.classList.remove('inactive');
-                header.classList.add('fadeIn');
-            } else {
-                header.classList.remove('fadeIn');
-                header.classList.add('fadeOut');
-                header.classList.add('inactive');
-            }
-        }
-
-        function toggleDropdown() {
-            if (dropdownOpen) closeDropdown()
-            else openDropdown()
-        }
-
-        function openDropdown() {
-            dropdownOpen = true;
-
-            header.classList.add('dropdown');
-
-            dropDownItems.classList.remove('mobile_nav_inactive')
-            dropDownItems.classList.add('mobile_nav_active')
-
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        }
-
-        function closeDropdown() {
-            dropdownOpen = false;
-
-            header.classList.remove('dropdown');
-
-            dropDownItems.classList.remove('mobile_nav_active')
-            dropDownItems.classList.add('mobile_nav_inactive')
-
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-
-    </script>
 
 </body>
 

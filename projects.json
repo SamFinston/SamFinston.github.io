@@ -76,7 +76,7 @@
         "tags": ["app", "mobile", "solo", "xcode", "swift"],
         "description": "",
         "links": {
-            
+            "github": "https://github.com/SamFinston/Thats-Movies"
         }
     },
     {
@@ -86,7 +86,7 @@
         "tags": ["app", "web", "class", "solo", "javascript"],
         "description": "",
         "links": {
-            
+            "open": "https://people.rit.edu/sxf5282/330/projects/AudioVisualizer/"
         }
     },
     {

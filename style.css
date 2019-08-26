@@ -242,6 +242,10 @@ h1{
     margin-top: 30px;
 }
 
+#reporter_link, #reporter_link:visited{
+    color: rgb(67, 156, 230);
+}
+
 #resume{
     min-width: 200px;
     max-width: 200px;
@@ -349,10 +353,10 @@ h2{
         grid-template-columns: 0 100% 0;
     }
 
-    h1{
+    /* h1{
         padding-top: 0;
         margin-top: 0;
-    }
+    } */
 
     #flexButtons{
         flex-direction: column;
@@ -372,6 +376,10 @@ h2{
     #info, #skills{
         flex-direction: column;
         align-items: center;
+    }
+
+    #blurb{
+        text-align: center;
     }
 
     #skills{
@@ -394,6 +402,10 @@ h2{
 
     header > div:first-child{
         height: 40px;
+    }
+
+    #flexLogo{
+        width: 90%;
     }
 
 }
