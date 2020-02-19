@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>unresponsive</title>
+	<style>
+		body {
+			font-family: sans-serif;
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+            text-align: center;
+            margin: 0;
+		}
+
+        #content {
+            /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+            padding: 30px; */
+            display: inline-block;
+            /* margin: auto; */
+            text-align: center;
+            white-space: nowrap;
+        } 
+
+        p {
+            margin: 0;
+        }
+
+		/* #content:active {
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        } */
+        
+	</style>
+</head>
+
+<body>
+    <div id="content">
+		<p id="poem"></p>
+    </div>
+	<script>
+        let poem;
+        let initialHeight;
+        let height;
+        let numLines;
+
+        let fontHeight;
+        let lineHeight;
+
+        const getPoem = (size) => {
+            let lineCount = 5;
+            let p = `sometimes I get stuck<br/>
+                    curl up into crumpled wad<br/>
+                    trying not to take up space<br/>
+                    head held to hurried heart<br/>
+                    beat tuning out the self`
+            
+            if(size < initialHeight * 4 / 5) {
+                lineCount =  4;
+                p = `make shield of shaking <br/>
+                    spine body rock and <br/>
+                    teardrops roll in silent<br/>
+                    symphonies give it time`
+            }
+
+            if(size < initialHeight * 3 / 5) {
+                lineCount =  3;
+                p = `do feelings or the lack<br/>
+                    thereof last a finite while<br/>
+                    is this fading expiration?`
+            }
+
+            if(size < initialHeight * 2 / 5) {
+                lineCount =  2;
+                p = `they call it fetal<br/>
+                    waiting to be born again`
+            }
+
+            if(size < initialHeight * 1 / 5) {
+                lineCount =  1;
+                p = `sometimes I get stuck`
+            }
+
+            return {poem: p, lines: lineCount};
+        };
+
+        const formatText = (p) => {
+            lineHeight = height / p.lines;
+            fontHeight = lineHeight * .8; 
+        };
+
+        const resize = () => {
+            height = window.innerHeight;
+            let p = getPoem(height);
+            poem.innerHTML = p.poem;
+
+            formatText(p);
+            poem.style.fontSize = fontHeight + "px";
+            poem.style.lineHeight = lineHeight + "px";
+        };
+
+		const init = () => {
+			poem = document.querySelector('#poem');
+            height = window.innerHeight;
+            initialHeight = height;
+            let p = getPoem(height);
+            poem.innerHTML = p.poem;
+            formatText(p);
+            poem.style.fontSize = fontHeight + "px";
+            poem.style.lineHeight = lineHeight + "px";
+		};
+
+		window.onload = init;
+        window.onresize = resize;
+
+	</script>
+</body>
+
+</html>

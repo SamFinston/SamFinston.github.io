@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>no bad memories</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #content {
+            margin: auto;
+        }
+
+        #poem {
+            margin: 32px;
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="content">
+        <p id="poem">
+            I can't always breathe easy<br/>
+            With this weight on my mind<br/>
+            (Some things only make any sense<br/>
+            When you don't think about them)<br/>
+            Wake up, wash up, cough up bad dreams<br/>
+            Let sink drain morning migraine<br/>
+            Keep the blood flowing one breath<br/>
+            At a time one breath at a<br/>
+            Time out I'm not sure if I can—<br/>
+            One breath at a time<br/>
+            <br/>
+            I can't always cry all the way<br/>
+            Sobs stop short at single streaks<br/>
+            Refuse inciting incident<br/>
+            (Recollection encourages action<br/>
+            So don't let it happen)<br/>
+            Try to think about what's right<br/>
+            To think about, and failing that<br/>
+            Fail to find closure for now<br/>
+            Hope not for next time, but<br/>
+            Failing that, maybe next time<br/>
+            <br/>
+            I can't always feel everything<br/>
+            Maybe I just feel too much that<br/>
+            I get overwhelmed and shrink and<br/>
+            Suddenly not responding<br/>
+            (I hope you'll wait a bit<br/>
+            I'm just not sure how long)<br/>
+            These moments spent waiting<br/>
+            For the right words or rather<br/>
+            The wrong situtation to pass<br/>
+            Sometimes it's hard to emote<br/>
+            <br/>
+            I'm trying to enjoy being alive<br/>
+            Over the sound of unrelenting static<br/>
+            Wondering why we're all so broken<br/>
+            And how long it's been this way<br/>
+            Finding, with some help, what will<br/>
+            And will not continue, what comes<br/>
+            After the fact however matter-of-factly<br/>
+            Will be better though it might be bitter<br/>
+            But only at first<br/>
+            (But only at first)<br/>
+        </p>
+    </div>
+
+</body>
+<script>
+
+    const init = () => {
+        let revisions = 0;
+        const poem = document.querySelector("#poem");
+        let words = poem.innerHTML;
+
+        const poemKey = "sxf5282-poem";
+        const countKey = "sxf5282-count";
+
+        const storedPoem = sessionStorage.getItem(poemKey);
+        const storedCount = sessionStorage.getItem(countKey);
+
+        if(storedCount) {
+            revisions = parseInt(storedCount);
+        }
+
+        if (storedCount && storedPoem) {
+            revisions += 1;
+            if(revisions > 4) revisions = 4;
+            words = storedPoem;
+            if(revisions == 1) {
+                words = words.replace(/can't/gi, "can");
+                words = words.replace(/Refuse/gi, "Welcome");
+                words = words.replace(/too/gi, "so");
+                words = words.replace("trying to enjoy", "enjoying");
+            }
+            else if (revisions == 2) {
+                words = words.replace(/weight/gi, "");
+                words = words.replace(/bad/gi, "");
+                words = words.replace(/wrong/gi, "");
+                words = words.replace(/failing/gi, "");
+                words = words.replace(/Failing/gi, "");
+                words = words.replace(/Fail/gi, "");
+                words = words.replace(/unrelenting/gi, "");
+                words = words.replace(/bitter/gi, "");
+            }
+            else if (revisions == 3) {
+                words = words.replace("With this", "");
+                words = words.replace("on my mind", "");
+                words = words.replace("Wake up", "");
+                words = words.replace("wash up", "");
+                words = words.replace("cough ", "");
+                words = words.replace("up", "");
+                words = words.replace("dreams", "");
+                words = words.replace(/,/gi, "");
+                words = words.replace("Let sink drain morning migraine", "");
+                words = words.replace("Keep the blood flowing one breath", "");
+                words = words.replace("At a time one breath at a", "");
+                words = words.replace("Time out", "");
+                words = words.replace("not sure if I can", "");
+                words = words.replace("I'm", "");
+                words = words.replace(/—/gi, "");
+                words = words.replace("One breath at a time", "");
+
+                words = words.replace("Sobs stop short at single streaks", "");
+                words = words.replace("Welcome inciting incident", "");
+                words = words.replace("Try to think about what's right", "");
+                words = words.replace("To think about", "");
+                words = words.replace("and", "");
+                words = words.replace("that", "");
+                words = words.replace("to find closure for now", "");
+                words = words.replace("Hope not for next time", "");
+                words = words.replace("but", "");
+                words = words.replace("that maybe next time", "");
+
+                words = words.replace("Maybe I just feel so much that", "");
+                words = words.replace("I get overwhelmed and shrink and", "");
+                words = words.replace("Suddenly not", "");
+                words = words.replace("responding", "");
+                words = words.replace("These moments spent waiting", "");
+                words = words.replace("For the right words or rather", "");
+                words = words.replace("The", "");
+                words = words.replace("situtation to pass", "");
+                words = words.replace("Sometimes it's hard to emote", "");
+
+                words = words.replace("Over the sound of", "");
+                words = words.replace("static", "");
+                words = words.replace("Wondering why we're all so broken", "");
+                words = words.replace("And how long it's been this way", "");
+                words = words.replace("Finding with some help what will", "");
+                words = words.replace("And will not continue what comes", "");
+                words = words.replace("After the fact however matter-of-factly", "");
+                words = words.replace("Will be better though it might be", "");
+                words = words.replace("But only at first", "");
+            }
+            else if (revisions == 4) {
+                words = words.replace(/\(/g, "").replace(/\)/g,"");
+
+                words = words.replace(" always", "").replace(" easy","");
+                words = words.replace("Some things only make any sense", "").replace("When you don't think about them","");
+
+                words = words.replace(" always", "").replace(" all the way","");
+                words = words.replace("Recollection encourages action", "").replace("So don't let it happen","");
+
+                words = words.replace(" always", "").replace(" everything","");
+                words = words.replace("I hope you'll wait a bit", "").replace("I'm just not sure how long","");
+
+                words = words.replace(" enjoying being", "");
+                words = words.replace("But only at first", "");
+            }
+
+            poem.innerHTML = words;
+        } 
+
+        console.log(revisions);
+
+        sessionStorage.setItem(poemKey, words);
+        sessionStorage.setItem(countKey, revisions);
+    };
+
+    window.onload = init;
+
+</script>
+
+</html>

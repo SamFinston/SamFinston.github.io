@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>This Is Just To Say</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rita/1.3.89/rita-full.js"></script>
+	<style>
+		body {
+			font-family: sans-serif;
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+		}
+
+        #content {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: inline-block;
+            margin: auto;
+            padding: 30px;
+        }
+
+		#content:active {
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<h1 id="title">This Is Just To Say</h1>
+		<p id="poem"></p>
+		<p id="credit"><i>William Carlos Williams</i></p>
+    </div>
+	<script>
+
+		let content = document.querySelector("#content");
+		let poem = document.querySelector("#poem");
+		let title = document.querySelector("#title");
+		let credit = document.querySelector("#credit");
+
+		let originalWords = ["eaten", "plums", "icebox", "saving", "breakfast", "Forgive", "delicious", "sweet", "cold", "Say"];
+		let words = ["eaten", "plums", "icebox", "saving", "breakfast", "Forgive", "delicious", "sweet", "cold", "Say"];
+		let names = [];
+
+		const capitalize = (word) => {
+			let firstLetter = word.substring(0, 1);
+			let otherLetters = word.substring(1, word.length);
+			return firstLetter.toUpperCase() + otherLetters;
+		};
+
+		const pluralize = (word) => {
+			let lastLetter = word.substring(word.length - 1, word.length);
+			if (lastLetter == "s" || lastLetter == "x") return word + "es";
+			else return word + "s";
+		};
+
+		const printPoem = () => {
+			let text = `
+			I have ${words[0]} <br />
+			the ${words[1]} <br />
+			that were in <br />
+			the ${words[2]} <br />
+			<br />
+			and which <br />
+			you were probably <br />
+			${words[3]} <br />
+			for ${words[4]} <br />
+			<br />
+			${capitalize(words[5])} me <br />
+			they were ${words[6]} <br />
+			so ${words[7]} <br />
+			and so ${words[8]}
+			`;
+
+			poem.innerHTML = text;
+
+			let titleText = `This Is Just To ${capitalize(words[9])}`;
+
+			title.innerHTML = titleText;
+		};
+
+		const randomize = () => {
+			for (let i = 0; i < words.length; i++) {
+				let oldWord = RiString(originalWords[i]);
+				let type = oldWord.posAt(0);
+				let newWord = RiTa.randomWord(type);
+				words[i] = newWord;
+			}
+
+			printPoem();
+
+			if(names.length > 0) {
+				setName();
+			}
+		};
+
+		const setName = () => {
+			let first = names[Math.floor(Math.random()*names.length)];
+			let second = names[Math.floor(Math.random()*names.length)];
+			credit.innerHTML = `<i>${first} ${second} ${pluralize(first)}</i>`
+		};
+
+		const fetchNames = () => {
+			fetch("https://uinames.com/api/?amount=50&gender=male&region=england")
+				.then(response => {
+					if (!response.ok) {
+						throw Error(`ERROR: ${response.statusText}`);
+						this.videoError = true;
+					}
+					return response.json();
+				})
+				.then(json => {
+					for(let name of json) {
+						names.push(name.name);
+						names.push(name.surname);
+					}
+					console.log(names);
+				}).catch(function (error) {
+					console.log(error);
+				})
+		};
+
+		const init = () => {
+			content.onclick = randomize;
+			printPoem();
+			fetchNames();
+		};
+
+		window.onload = init;
+
+	</script>
+</body>
+
+</html>

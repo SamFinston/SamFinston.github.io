@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>numb</title>
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #grid {
+            display: grid;
+            grid-gap: 10px 10px;
+            justify-content: center;
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, 256px);
+        }
+
+        .cell {
+            width: 256px;
+            height: 256px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell:active {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        h3 {
+            font-family: 'Inknut Antiqua', serif;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="one" class="cell">
+            <h3>and he couldn't</h3>
+        </div>
+
+        <div id="two" class="cell">
+            <h3>cry</h3>
+        </div>
+
+        <div id="three" class="cell">
+            <h3>right now</h3>
+        </div>
+
+        <div id="four" class="cell">
+            <h3>the time came</h3>
+        </div>
+
+        <div id="five" class="cell">
+            <h3>at night</h3>
+        </div>
+
+        <div id="six" class="cell">
+            <h3>what we waited for</h3>
+        </div>
+
+        <div id="seven" class="cell">
+            <h3>postponed</h3>
+        </div>
+
+        <div id="eight" class="cell">
+            <h3>emotions</h3>
+        </div>
+
+        <div id="nine" class="cell">
+            <h3>out of order</h3>
+        </div>
+    </div>
+    <script>
+
+        let clicks = 0;
+        let activeCells = [];
+
+        const swap = () => {
+            activeCells[0].style.backgroundColor = 'white';
+
+            let phraseA = activeCells[0].querySelector('h3').innerHTML;
+            let phraseB = activeCells[1].querySelector('h3').innerHTML;
+            
+            activeCells[0].querySelector('h3').innerHTML = phraseB;
+            activeCells[1].querySelector('h3').innerHTML = phraseA;
+
+            activeCells = [];
+        };
+
+        const select = (e) => {
+            activeCells.push(e.target);
+            if (activeCells.length == 2) swap();
+            else e.target.style.backgroundColor = '#f2f2f2';
+        };
+
+        const init = () => {
+            let cells = document.querySelectorAll('.cell');
+            for (let c of cells) {
+                c.addEventListener("click", select);
+            }
+        };
+
+        window.onload = init;
+
+    </script>
+</body>
+
+</html>
