@@ -103,7 +103,7 @@
 		};
 
 		const fetchNames = () => {
-			fetch("https://uinames.com/api/?amount=50&gender=male&region=england")
+			fetch("https://samfinston.github.io/names.json")
 				.then(response => {
 					if (!response.ok) {
 						throw Error(`ERROR: ${response.statusText}`);
@@ -112,9 +112,8 @@
 					return response.json();
 				})
 				.then(json => {
-					for(let name of json) {
-						names.push(name.name);
-						names.push(name.surname);
+					for(let name of json.names) {
+						names.push(name);
 					}
 					console.log(names);
 				}).catch(function (error) {
