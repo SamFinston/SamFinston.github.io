@@ -6,30 +6,111 @@
     <title>index</title>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
             margin: 0;
         }
 
-        #content {
+        .screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
             text-align: center;
-            margin: auto;
+            align-items: center;
         }
 
-        a {
+        #content,
+        #info-block {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poem-link {
             text-decoration: none;
             color: black;
+            position: relative;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            height: 40px;
+            width: 128px;
         }
 
-        p {
+        .title {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            height: 40px;
+            width: 128px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            user-select: none;
+        }
+
+        .info-container {
+            position: absolute;
+            margin: 0;
+            right: -36px;
+            bottom: 6px;
+            color: black;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-link {
+            text-decoration: none;
+            color: black;
+            height: 24px;
+            width: 24px;
+            border-radius: 16px;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            user-select: none;
+        }
+
+        #info-block {
+            border: 1px dashed black;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #info-block > * {
+            padding: 10px;
+            margin: 0;
+        }
+
+        #info-text {
+            padding-top: 0;
+            line-height: 1.5;
+        }
+
+        #return {
+            text-decoration: none;
             padding: 10px;
             border: 1px solid black;
+            color: black;
+            margin-top: 10px;
+            user-select: none;
         }
 
-        p:hover {
+        .title:hover,
+        .info-link:hover,
+        #return:hover {
             background-color: black;
             color: white;
         }
@@ -37,12 +118,97 @@
 </head>
 
 <body>
-    <div id="content">
-        <a target="_blank" href="apnea.html"><p>apnea</p></a>
-        <a target="_blank" href="numb.html"><p>numb</p></a>
-        <a target="_blank" href="unresponsive.html"><p>unresponsive</p></a>
-        <a target="_blank" href="nobadmemories.html"><p>no bad memories</p></a>
+    <div id="page-1" class="screen">
+        <div id="content">
+            <div class="poem-link">
+                <a class="title" href="apnea.html" target="_blank">apnea</a>
+
+                <div class="info-container">
+                    <a class="info-link" href="#page-2" data-poem="apnea"><em><strong>i</strong></em></a>
+                </div>
+            </div>
+
+            <div class="poem-link">
+                <a class="title" href="numb.html" target="_blank">numb</a>
+
+                <div class="info-container">
+                    <a class="info-link" href="#page-2" data-poem="numb"><em><strong>i</strong></em></a>
+                </div>
+            </div>
+
+            <div class="poem-link">
+                <a class="title" href="unresponsive.html" target="_blank">unresponsive</a>
+
+                <div class="info-container">
+                    <a class="info-link" href="#page-2" data-poem="unresponsive"><em><strong>i</strong></em></a>
+                </div>
+            </div>
+
+            <div class="poem-link">
+                <a class="title" href="nobadmemories.html" target="_blank">no bad memories</a>
+
+                <div class="info-container">
+                    <a class="info-link" href="#page-2" data-poem="nobadmemories"><em><strong>i</strong></em></a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="page-2" class="screen">
+        <div id="info-block">
+            <p id="info-title">lorem ipsum</p>
+            <p id="info-text">lorem ipsum</p>
+        </div>
+        <a id="return" href="#page-1">return</a>
+    </div>
+
+    <script>
+
+        let infoTitle;
+        let infoText;
+        let returnButton;
+
+        const instructions = {
+            apnea: {
+                title: '<em>apnea: instructions</em>',
+                instructions: 'read'
+            },
+            numb: {
+                title: '<em>numb: controls</em>',
+                instructions: 'click on blocks to swap phrases'
+            },
+            unresponsive: {
+                title: '<em>unresponsive: instructions</em>',
+                instructions: 'make window as large as possible, but not fullscreen<br /> refresh page to recalibrate<br /> shrink page vertically to progress'
+            },
+            nobadmemories: {
+                title: '<em>no bad memories: controls</em>',
+                instructions: 'refresh page to forget'
+            }
+        };
+
+        const setInfo = (e) => {
+            infoBlock.style.display = 'flex';
+            let key = e.currentTarget.dataset.poem;
+            infoTitle.innerHTML = instructions[key].title;
+            infoText.innerHTML = instructions[key].instructions;
+        };
+
+        const init = () => {
+            infoBlock = document.querySelector('#info-block');
+            infoTitle = document.querySelector('#info-title');
+            infoText = document.querySelector('#info-text');
+            returnButton = document.querySelector('#return');
+
+            let infoButtons = document.querySelectorAll('.info-link');
+            for (let i of infoButtons) {
+                i.addEventListener("click", setInfo);
+            }
+        };
+
+        window.onload = init;
+    </script>
+
 </body>
 
 </html>
