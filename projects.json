@@ -5,9 +5,21 @@
       "date" : ["December", 12, 2018],
       "tags": ["game", "class", "team", "c++"],
       "description": "A 3D recreation of Alexey Pajitnov's 1990 puzzle game 'Knight Move'. Programmed by a team of three using C++ in an OpenGL-based engine.",
+      "video": "7Ao0NrOcGY0",
       "links": {
           "github": "https://github.com/MAClavell/Knight-Move-3D"
       }
+    },
+    {
+        "name": "Stellar Standoff",
+        "thumbnail": "https://samfinston.github.io/images/StellarStandoff.png",
+        "date" : ["November", 11, 2018],
+        "tags": ["game", "class", "team", "unity", "c#", "mobile"],
+        "description": "A party game for mobile devices. Developed by a team of six in Unity with C# for a class project.",
+        "video": "DgspRnFU7oI",
+        "links": {
+            "play": "https://joms.itch.io/stellar-standoff"
+        }
     },
     {
         "name": "VRn't",
@@ -15,8 +27,10 @@
         "date" : ["April", 4, 2018],
         "tags": ["game", "jam", "team", "unity", "c#"],
         "description": "A satirical arcade game playable in browser. Made in Unity over 72 hours in a team of four for the Ludum Dare 41 game jam, where it ranked among the top 20 games in 'Humor.'",
+        "video": "guZK64FUALQ",
         "links": {
-            "play": "https://joms.itch.io/vrnt"
+            "play": "https://joms.itch.io/vrnt",
+            "jam page": "https://ldjam.com/events/ludum-dare/41/vrnt"
         }
     },
     {
@@ -26,7 +40,19 @@
         "tags": ["game", "solo", "pico-8"],
         "description": "An experimental action arcade game playable in browser. Built in the game engine Pico-8.",
         "links": {
-            "play": "https://people.rit.edu/sxf5282/portfolio/spacestationscoober.html"
+            "play": "https://www.lexaloffle.com/bbs/?pid=42017"
+        }
+    },
+    {
+        "name": "Sugarplum Summit",
+        "thumbnail": "https://samfinston.github.io/images/SugarplumSummit.png",
+        "date" : ["December", 12, 2017],
+        "tags": ["game", "jam", "team", "unity", "c#"],
+        "description": "A 'shoot 'em up' game playable in browser. This game was made in Unity originally over 72 hours in a team of three for the Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game.",
+        "video": "_ol4agUfcPw",
+        "links": {
+            "play": "https://joms.itch.io/sugarplum-summit",
+            "jam page": "https://ldjam.com/events/ludum-dare/40/sugarplum-summit"
         }
     },
     {
@@ -36,17 +62,7 @@
         "tags": ["poetry", "solo", "writing"],
         "description": "An illustrated self-published collection of my poetry. Available for purchase online in a digital format.",
         "links": {
-            "store": "https://coolsummit.itch.io/antiqua"
-        }
-    },
-    {
-        "name": "Sugarplum Summit",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
-        "date" : ["December", 12, 2017],
-        "tags": ["game", "jam", "team", "unity", "c#"],
-        "description": "A 'shoot 'em up' game playable in browser. This game was made in Unity originally over 72 hours in a team of three for the Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game.",
-        "links": {
-            "play": "https://joms.itch.io/sugarplum-summit"
+            "purchase": "https://coolsummit.itch.io/antiqua"
         }
     },
     {
@@ -55,16 +71,6 @@
         "date" : ["May", 5, 2017],
         "tags": ["game", "class", "team", "c#"],
         "description": "A 'Binding of Isaac' styled game created over a semester in a group of four students with the Monogame game engine. I was responsible for all visual aspects of the game (UI, sprite work, art direction, animation, graphics programming) and assisted in gameplay design.",
-        "links": {
-            
-        }
-    },
-    {
-        "name": "Stellar Standoff",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
-        "date" : ["November", 11, 2018],
-        "tags": ["game", "class", "team", "unity", "c#", "mobile"],
-        "description": "A party game for mobile devices. Developed by a team of six in Unity with C# for a class project.",
         "links": {
             
         }
