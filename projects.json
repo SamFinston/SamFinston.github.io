@@ -1,10 +1,10 @@
 [
     {
       "name": "Knight Move 3D",
-      "thumbnail": "https://samfinston.github.io/images/knightThumb.png",
+      "thumbnail": "https://samfinston.github.io/media/knightThumb.png",
       "date" : ["December", 12, 2018],
       "tags": ["game", "class", "team", "c++"],
-      "description": "A 3D recreation of Alexey Pajitnov's 1990 puzzle game 'Knight Move'. Programmed by a team of three using C++ in an OpenGL-based engine.",
+      "description": "A 3D recreation of Alexey Pajitnov's 1990 puzzle game 'Knight Move.' Players must maneuver their knight piece around a perilous board, pursuing hearts and avoiding the rival rook. <cite>Knight Move 3D</cite> was developed using C++ and OpenGL by a team of three. I was one of two programmers on the project",
       "video": "7Ao0NrOcGY0",
       "links": {
           "github": "https://github.com/MAClavell/Knight-Move-3D"
@@ -12,52 +12,52 @@
     },
     {
         "name": "Stellar Standoff",
-        "thumbnail": "https://samfinston.github.io/images/StellarStandoff.png",
+        "thumbnail": "https://samfinston.github.io/media/StellarStandoff.png",
         "date" : ["November", 11, 2018],
         "tags": ["game", "class", "team", "unity", "c#", "mobile"],
-        "description": "A party game for mobile devices. Developed by a team of six in Unity with C# for a class project.",
+        "description": "A party game for android devices. Up to eight players duke it out over one valuable asteroid by making strategic commands and passing the phone. <cite>Stellar Standoff</cite> was developed in Unity by a team of six. I helped design, program, and provide art.",
         "video": "DgspRnFU7oI",
         "links": {
-            "play": "https://joms.itch.io/stellar-standoff"
+            "itch.io": "https://joms.itch.io/stellar-standoff"
         }
     },
     {
         "name": "VRn't",
-        "thumbnail": "https://samfinston.github.io/images/VRntThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/VRntThumb.png",
         "date" : ["April", 4, 2018],
         "tags": ["game", "jam", "team", "unity", "c#"],
-        "description": "A satirical arcade game playable in browser. Made in Unity over 72 hours in a team of four for the Ludum Dare 41 game jam, where it ranked among the top 20 games in 'Humor.'",
+        "description": "A satirical arcade game playable in browser. Take control of a gamer with a new VR game and help him win without wrecking his living room. <cite>VRn't</cite> was developed in Unity over the course 72 hours for the Ludum Dare 41 game jam, where it ranked among the top 20 games in 'Humor.' I helped program, design, and write on a team of four",
         "video": "guZK64FUALQ",
         "links": {
-            "play": "https://joms.itch.io/vrnt",
+            "itch.io": "https://joms.itch.io/vrnt",
             "jam page": "https://ldjam.com/events/ludum-dare/41/vrnt"
         }
     },
     {
         "name": "Space Station Scoober",
-        "thumbnail": "https://samfinston.github.io/images/scooberThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/scooberThumb.png",
         "date" : ["July", 7, 2017],
         "tags": ["game", "solo", "pico-8"],
-        "description": "An experimental action arcade game playable in browser. Built in the game engine Pico-8.",
+        "description": "An experimental action arcade game playable in browser. Make your way through an alien-infested moonbase with your trusty blaster while taking cover behind downed enemies. I developed this game on my own using the Pico-8 game engine.",
         "links": {
             "play": "https://www.lexaloffle.com/bbs/?pid=42017"
         }
     },
     {
         "name": "Sugarplum Summit",
-        "thumbnail": "https://samfinston.github.io/images/SugarplumSummit.png",
+        "thumbnail": "https://samfinston.github.io/media/SugarplumSummit.png",
         "date" : ["December", 12, 2017],
         "tags": ["game", "jam", "team", "unity", "c#"],
-        "description": "A 'shoot 'em up' game playable in browser. This game was made in Unity originally over 72 hours in a team of three for the Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game.",
+        "description": "A 'cute 'em up' game playable in browser. Fly up a carefully defended Christmas tree to defeat the evil awaiting at the top, taking care to rescue trapped angels along the way. <cite>Sugarplum Summit</cite> was developed in Unity over the course of 72 hours for the Ludum Dare 40 game jam. I designed, drew, and animated all sprites in addition to co-designing the game on a team of three.",
         "video": "_ol4agUfcPw",
         "links": {
-            "play": "https://joms.itch.io/sugarplum-summit",
+            "itch.io": "https://joms.itch.io/sugarplum-summit",
             "jam page": "https://ldjam.com/events/ludum-dare/40/sugarplum-summit"
         }
     },
     {
         "name": "Antiqua",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/antiquaThumb.png",
         "date" : ["August", 8, 2017],
         "tags": ["poetry", "solo", "writing"],
         "description": "An illustrated self-published collection of my poetry. Available for purchase online in a digital format.",
@@ -67,7 +67,7 @@
     },
     {
         "name": "Shapeshift Crypt",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/antiquaThumb.png",
         "date" : ["May", 5, 2017],
         "tags": ["game", "class", "team", "c#"],
         "description": "A 'Binding of Isaac' styled game created over a semester in a group of four students with the Monogame game engine. I was responsible for all visual aspects of the game (UI, sprite work, art direction, animation, graphics programming) and assisted in gameplay design.",
@@ -77,7 +77,7 @@
     },
     {
         "name": "That's Movies",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/antiquaThumb.png",
         "date" : ["June", 6, 2019],
         "tags": ["app", "mobile", "solo", "xcode", "swift"],
         "description": "",
@@ -87,7 +87,7 @@
     },
     {
         "name": "Web Audio",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/antiquaThumb.png",
         "date" : ["February", 2, 2019],
         "tags": ["app", "web", "class", "solo", "javascript"],
         "description": "",
@@ -97,7 +97,7 @@
     },
     {
         "name": "Port Authority",
-        "thumbnail": "https://samfinston.github.io/images/antiquaThumb.png",
+        "thumbnail": "https://samfinston.github.io/media/antiquaThumb.png",
         "date" : ["May", 5, 2019],
         "tags": ["app", "web", "class", "solo", "javascript"],
         "description": "",

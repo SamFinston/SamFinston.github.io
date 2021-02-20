@@ -18,12 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
 
     <!-- Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ac288d286f.js" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="media/bolo-32.png" sizes="32x32">
+    <link rel="shortcut icon" type="image/png" href="media/bolo-16.png" sizes="16x16">
 
     <!-- Preview -->
-    <meta property="og:image" content="images/SitePreview.gif">
+    <meta property="og:image" content="media/SitePreview.png">
 
     <title>Sam Finston</title>
 
@@ -31,167 +33,169 @@
 
 <body>
 
-    <div id="columns">
-
-        <div class="column leftCol"></div>
-
-        <div class="column centerCol" id="topAnchor">
-
-            <!-- Banner -->
-            <div id="bannerBox">
-                <img src="images/svgBanner.svg" id="flexLogo">
-                <div id="flexButtons">
-                    <a class="navButton" id="centerButton" href="#projectsAnchor">Projects</a>
-                    <a class="navButton" href="#aboutAnchor">About</a>
-                    <a class="navButton" href="#contactAnchor">Contact</a>
+    <div id="fade" class="inactive">
+            <div id="modal">
+                <div id="modal-header">
+                    <!-- X      <= => -->
+                    <i class="fas fa-times mobile shadow" id="exit"></i>
                 </div>
+                <!-- <div id="wrapper"> -->
+                    <div id="modal-content"></div>
+                <!-- </div> -->
             </div>
-
-            <!-- Projects -->
-            <h1 id="projectsAnchor">Projects</h1>
-
-            <div id="projects">
-
-                <!-- Project 1 -->
-                <div>
-                    <img class="projectThumb" src="images/knightThumb.png" alt="Project Thumbnail">
-                    <h2>Knight Move 3D</h2>
-                    <p class="projectInfo">
-                        A 3D recreation of Alexey Pajitnov's 1990 puzzle game "Knight Move." Programmed by a team of
-                        three using C++ in an OpenGL-based engine. <br />
-                        <a href="https://github.com/MAClavell/Knight-Move-3D">>GitHub</a>
-                    </p>
-                </div>
-
-                <!-- Project 2 -->
-                <div>
-                    <img class="projectThumb" src="images/VRntThumb.png" alt="Project Thumbnail">
-                    <h2>VRn't</h2>
-                    <p class="projectInfo">
-                        A satirical arcade game playable in browser. Made in Unity over 72 hours in a team of four for
-                        the Ludum Dare 41 game jam, where it ranked among the top 20 games in "Humor."<br />
-                        <a href="https://joms.itch.io/vrnt">>play</a>
-                        <!-- <a href="https://ldjam.com/events/ludum-dare/41/vrnt">>info</a> -->
-                    </p>
-                </div>
-
-                <!-- Project 3 -->
-                <div>
-                    <img class="projectThumb" src="images/scooberThumb.png" alt="Project Thumbnail">
-                    <h2>Space Station Scoober</h2>
-                    <p class="projectInfo">
-                        An experimental action arcade game playable in browser. Built in the game engine Pico-8. <br />
-                        <a href="https://www.lexaloffle.com/bbs/?pid=42017">>play</a>
-                    </p>
-                </div>
-
-                <!-- Project 4 -->
-                <div>
-                    <img class="projectThumb" src="images/antiquaThumb.png" alt="Project Thumbnail">
-                    <h2>Antiqua</h2>
-                    <p class="projectInfo">
-                        An illustrated self-published collection of my poetry. Available for purchase online in a
-                        digital format. <br />
-                        <a href="https://coolsummit.itch.io/antiqua">>store</a>
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- About -->
-            <h1 id="aboutAnchor">About</h1>
-
-            <!-- Info -->
-            <div id="info">
-                <img src="images/self.jpg" id="circleImage">
-                <div id="aboutBox">
-                    <p id="blurb">
-                        I like to create. Whether it's a game, a website, an app, or a poem, you can be sure that I'm
-                        doing my best work. You can currently find me doing native iOS development by day and game dev
-                        by night. If you're looking for an experienced programmer with a knack for design and writing,
-                        drop me a line!
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Skills -->
-            <div id="skills">
-                <div>
-                    <p class="skills">
-                        <u>Languages</u>:
-                        Proficient in C# and experienced in JavaScript, HTML/CSS, Swift, C++, Java, and Lua
-                    </p>
-
-                    <p class="skills">
-                        <u>Software</u>:
-                        Unity, Visual Studio, MonoGame, Game Maker: Studio, Adobe Illustrator, Adobe Photoshop,
-                        Autodesk Maya, Xcode
-                    </p>
-
-                    <p class="skills">
-                        <u>Writing</u>:
-                        Poetry, fiction, game dialogue, and journalism. Read one of my tech articles for RIT's Reporter Magazine
-                        <a id="reporter_link" href="https://reporter.rit.edu/tech/google-assisted-future">here</a>
-                    </p>
-                </div>
-
-                <a id="resume" href="SamFinston_Resume.pdf">resume</a>
-
-            </div>
-
-            <!-- Contact -->
-            <h1 id="contactAnchor">Contact</h1>
-
-            <div id="contactIcons">
-                <a title="sxf5282@rit.edu" class="icon" href="mailto:sxf5282@rit.edu">
-                    <i class="fas fa-envelope fa-3x"></i>
-                </a>
-
-                <a title="LinkedIn" class="icon" href="https://www.linkedin.com/in/sam-finston/">
-                    <i class="fab fa-linkedin fa-3x"></i>
-                </a>
-
-                <a title="itch.io" class="icon" href="https://coolsummit.itch.io/">
-                    <i class="fas fa-gamepad fa-3x"></i>
-                </a>
-
-                <a title="Handshake" class="icon" href="https://app.joinhandshake.com/users/6909863">
-                    <i class="fas fa-handshake fa-3x"></i>
-                </a>
-            </div>
-
         </div>
 
-        <div class="column rightCol"></div>
-
-    </div>
-
-    <!-- Header -->
     <header class="inactive">
-        <div>
-            <p id="name">
-                <a class="page_link desktop" href="#topAnchor">Sam Finston // Game Developer & Poet</a>
-                <a class="page_link" id="initials" href="#topAnchor">SF</a>
-            </p>
 
-            <p id="top_nav">
-                <a class="page_link desktop" href="#projectsAnchor">Projects</a>
-                <a class="page_link desktop" href="#aboutAnchor">About</a>
-                <a class="page_link desktop" href="#contactAnchor">Contact</a>
-                <a class="page_link desktop" id="hamburger">
-                    <i id="mobileIcon" class="fas fa-bars fa-1x"></i>
-                </a>
-            </p>
-        </div>
+        <a class="shadow" href="#hero">
+            <h1 id="initials">SF</h1>
+            <h1 id="name">Sam Finston</h1>
+        </a>
 
-        <div id="dropdown_items" class="mobile_nav_inactive">
-            <a class="page_link" href="#projectsAnchor">Projects</a>
-            <a class="page_link" href="#aboutAnchor">About</a>
-            <a class="page_link" href="#contactAnchor">Contact</a>
+        <div class="desktop" id="top-nav-desktop">
+            <a class="shadow" href="#projects">
+                <h1>Projects</h1>
+            </a>
+            <a class="shadow" href="#bio">
+                <h1>About</h1>
+            </a>
+            <a class="shadow" href="#contact">
+                <h1>Contact</h1>
+            </a>
+
+            <i class="fas fa-bars mobile shadow" id="hamburger"></i>
         </div>
 
     </header>
+
+    <div id="top-nav-mobile">
+        <a class="shadow" href="#projects">
+            <h1>Projects</h1>
+        </a>
+        <a class="shadow" href="#bio">
+            <h1>About</h1>
+        </a>
+        <a class="shadow" href="#contact">
+            <h1>Contact</h1>
+        </a>
+    </div>
+
+    <div id="stack">
+
+        <div id="hero">
+            <img id="banner" src="media/banner.svg">
+            <div id="navigation">
+                <a class="nav-button darken click-transition" href="#projects">
+                    <h1>Projects</h1>
+                </a>
+                <a class="nav-button darken click-transition" href="#bio">
+                    <h1>About</h1>
+                </a>
+                <a class="nav-button darken click-transition" href="#contact">
+                    <h1>Contact</h1>
+                </a>
+            </div>
+        </div>
+
+        <div id="projects">
+            <div id="games">
+                <div id="carousel-header">
+                    <h1 class="section-header" id="games-header">Games</h1>
+                    <div class="controls">
+                        <a class="scroll-button" id="back">
+                            <i class="fas fa-play fa-flip-horizontal"></i>
+                        </a>
+                        <a class="scroll-button" id="next">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="bar">
+                    <div id="progress"></div>
+                </div>
+
+                <div id="carousel">
+                    <img class="box" src="media/box.png"></img>
+                    <img class="box" src="media/box.png"></img>
+                    <img class="box" src="media/box.png"></img>
+                    <img class="box" src="media/box.png"></img>
+                    <img class="box" src="media/box.png"></img>
+                </div>
+            </div>
+
+            <h1 class="section-header" id="writing-header">Writing</h1>
+            <div id="writing">
+
+                <div class="writing-block">
+                        <a class="writing-icon" href="writing.html#poetry">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
+                    <h2>Poetry</h2>
+                </div>
+
+                <div class="writing-block">
+                        <a class="writing-icon"  href="writing.html#journalism">
+                            <i class="far fa-newspaper"></i>
+                        </a>
+                    <h2>Journalism</h2>
+                </div>
+
+                <div class="writing-block">
+                        <a class="writing-icon" href="writing.html#digital-poetics">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    <h2>Digital Poetics</h2>
+                </div>
+
+                <div class="writing-block">
+                        <a class="writing-icon" href="writing.html#performance">
+                            <i class="far fa-folder-open"></i>
+                        </a>
+                    <h2>More</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="section-header" id="bio">About</h1>
+        <div id="about">
+
+            <div class="about-block" id="info">
+                <a class="circle" id="headshot"></a>
+                <p>
+                    I like to create. Whether it's a game, a website, an app, or a poem,
+                    you can be sure that I'm doing my best work. You can currently find
+                    me doing native iOS development by day and game dev by night. If you're
+                    looking for an experienced programmer with a knack for design and writing,
+                    drop me a line!
+                </p>
+            </div>
+
+
+            <div class="about-block" id="skills">
+                <a class="circle darken click-transition" id="resume" href="media/SamFinston_Resume.pdf">
+                    <h1>resume</h1>
+                </a>
+                <p>
+                    <u>Languages</u>: Proficient in C#, JavaScript, HTML/CSS, and Swift. Experienced in C++, Java, and Lua<br />
+                    <br />
+                    <u>Software</u>: Unity, Xcode, Visual Studio, Unreal Engine, MonoGame, Game Maker: Studio, Adobe Illustrator, Adobe Photoshop, Autodesk Maya<br />
+                    <br />
+                    <u>Writing</u>: Poetry, fiction, games, and journalism
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <a class="shadow" href="mailto: sxf5282@rit.edu"><i class="fas fa-envelope"></i></a>
+        <a class="shadow" href="https://www.linkedin.com/in/sam-finston/" target="blank"><i class="fab fa-linkedin"></i></a>
+        <a class="shadow" href="https://coolsummit.itch.io/" target="blank"><i class="fab fa-itch-io"></i></a>
+    </footer>
 
 </body>
 
