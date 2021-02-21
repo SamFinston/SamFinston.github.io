@@ -112,6 +112,12 @@ a {
     height: 100vh;
 }
 
+.link-icon {
+    color: var(--blue-6);
+    padding-left: 6px;
+    vertical-align: 15%;
+}
+
 #projects, #bio, #poetry, #journalism, #digital-poetics, #performance {
     padding-top: 55px;
 }
