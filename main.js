@@ -56,10 +56,10 @@ const init = () => {
         progress(e, carousel, currentProgress);
     });
     next.addEventListener("click", function (e) {
-        scrollNext(e, carousel, 550);
+        scrollNext(e, carousel, 300);
     });
     back.addEventListener("click", function (e) {
-        scrollPrevious(e, carousel, 256);
+        scrollPrevious(e, carousel, 300);
     });
 
     // Modal Init
