@@ -49,6 +49,7 @@ const init = () => {
     // Carousel init
     currentProgress = document.querySelector('#progress');
     carousel = document.querySelector('#carousel');
+    carousel.scrollLeft = 0;
     next = document.querySelector('#next');
     back = document.querySelector('#back');
 

@@ -578,6 +578,15 @@ footer>a {
 /* #region */
 
 @media (max-width: 768px) {
+    p, ul {
+        font-size: 0.8em;
+    }
+    h1, .section-header {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
     .shadow:hover, .shadow:active {
         text-shadow: none;
     }
@@ -634,6 +643,24 @@ footer>a {
     iframe {
         width: 320px;
         height: 180px;
+    }
+    .text-section {
+        padding: 16px;
+    }
+    ul {
+        padding-left: 16px;
+    }
+    #modal-content {
+        padding: 16px;
+    }
+    #modal-content::after {
+        padding: 8px;
+    }
+    .modal-link {
+        padding: 8px;
+    }
+    #stack {
+        padding-bottom: 20px;
     }
 }
 
