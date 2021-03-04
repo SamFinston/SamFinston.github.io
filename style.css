@@ -662,6 +662,9 @@ footer>a {
     #stack {
         padding-bottom: 20px;
     }
+    #headshot {
+        margin-right: 0;
+    }
 }
 
 /* #endregion */
