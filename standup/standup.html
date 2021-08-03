@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>StandUp!</title>
+
+    <style>
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+
+        #columns {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #form,
+        #results {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inputs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .member-edit {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 256px;
+            height: 30px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+        }
+
+        .delete {
+            height: 32px;
+            width: 32px;
+            border: 1px solid red;
+            color: red;
+            display: grid;
+            place-items: center;
+            margin-left: 4px;
+            transition: all 0.25s;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .delete:hover {
+            color: white;
+            background-color: red;
+            cursor: pointer;
+        }
+
+        .button {
+            height: 32px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            place-items: center;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-bottom: 4px;
+            transition: all 0.25s;
+            user-select: none;
+        }
+
+        .button:hover {
+            cursor: pointer;
+        }
+
+        .button:active {
+            font-size: 16px;
+        }
+
+        #add {
+            border: 1px solid blue;
+            color: blue;
+        }
+
+        #add:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        #save {
+            border: 1px solid green;
+            color: green;
+        }
+
+        #save:hover {
+            color: white;
+            background-color: green;
+        }
+
+        #randomize {
+            border: 1px solid purple;
+            color: purple;
+        }
+
+        #randomize:hover {
+            color: white;
+            background-color: purple;
+        }
+
+        #random-q {
+            border: 1px solid orange;
+            color: orange;
+        }
+
+        #random-q:hover {
+            color: white;
+            background-color: orange;
+        }
+
+        #copy,
+        #copy-q {
+            border: 1px solid gray;
+            color: gray;
+        }
+
+        #copy:hover,
+        #copy-q:hover {
+            color: white;
+            background-color: gray;
+        }
+
+        #results {
+            width: 292px;
+            margin-bottom: 4px;
+            margin-left: 16px;
+            display: none;
+        }
+
+        #order {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        #question-block {
+            display: none;
+        }
+
+        #order-block {
+            display: none;
+        }
+
+        #question {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="columns">
+
+        <div id="form">
+            <div id="inputs"></div>
+            <a class="button" id="add">add member</a>
+            <a class="button" id="save">save team</a>
+            <a class="button" id="randomize">randomize order</a>
+            <a class="button" id="random-q">random question</a>
+        </div>
+
+        <div id="results">
+            <div id="order-block">
+                <ol id="order"></ol>
+                <a class="button" id="copy">copy</a>
+            </div>
+
+            <div id="question-block">
+                <p id="question"></p>
+                <a class="button" id="copy-q">copy</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        "use strict";
+
+        let members = [];
+        let localStorage;
+        let saveButton;
+        let questionsToggled = false;
+        let questions = [];
+
+        const init = () => {
+            localStorage = window.localStorage;
+            loadTeam();
+            fetchQuestions();
+            let inputs = document.querySelectorAll('input');
+            for (let i of inputs) {
+                i.addEventListener('input', compileMembers);
+            }
+
+            let addButton = document.querySelector('#add')
+            addButton.addEventListener('click', addInput);
+
+            saveButton = document.querySelector('#save')
+            saveButton.addEventListener('click', saveTeam);
+
+            let randomizeButton = document.querySelector('#randomize');
+            randomizeButton.addEventListener('click', randomize);
+
+            let randomQuestionButton = document.querySelector('#random-q');
+            randomQuestionButton.addEventListener('click', getQuestion);
+
+            let copyButton = document.querySelector('#copy');
+            copyButton.addEventListener('click', copyOrder);
+
+            let copyQuestionButton = document.querySelector('#copy-q');
+            copyQuestionButton.addEventListener('click', copyQuestion);
+
+            compileMembers(false);
+
+            let deleteButtons = document.querySelectorAll('.delete');
+            for (let d of deleteButtons) {
+                d.addEventListener('click', removeInput);
+            }
+        };
+
+        const compileMembers = (notStartup) => {
+            members = [];
+            let inputs = document.querySelectorAll('input');
+            for (let i of inputs) {
+                members.push(i.value);
+            }
+            if (notStartup) saveButton.innerHTML = 'save team*';
+        };
+
+        const addInput = (e, name = '') => {
+            let form = document.querySelector('#inputs');
+            let input = document.createElement('div');
+            input.className = 'member-edit';
+            input.innerHTML = `
+                <input type="text" name="name" value="${name}" placeholder="Name" required>
+                <a class="delete">X</a>`;
+            form.appendChild(input);
+
+            let inputs = document.querySelectorAll('input');
+            for (let i of inputs) {
+                i.addEventListener('input', compileMembers);
+            }
+
+            let deleteButtons = document.querySelectorAll('.delete');
+            for (let d of deleteButtons) {
+                d.addEventListener('click', removeInput);
+            }
+        };
+
+        const removeInput = (e) => {
+            e.currentTarget.parentNode.remove();
+            compileMembers(true);
+        };
+
+        const randomize = () => {
+            let shuffledMembers = shuffleArray(members);
+            let orderElement = document.querySelector('#order');
+            while (orderElement.firstChild) {
+                orderElement.removeChild(orderElement.lastChild);
+            }
+            for (let i = 0; i < members.length; i++) {
+                let name = document.createElement('li');
+                name.innerHTML = `${shuffledMembers[i]}`;
+                name.className = 'ordered-name';
+                orderElement.appendChild(name);
+            }
+
+            let resultsElement = document.querySelector('#results');
+            resultsElement.style.display = 'block';
+            let orderBlock = document.querySelector('#order-block');
+            orderBlock.style.display = 'block';
+        };
+
+        const loadTeam = () => {
+            let cache = localStorage.getItem('standupTeam');
+            if (cache && cache.length > 0) {
+                let names = cache.split(',');
+                for (let name of names) {
+                    addInput(null, name);
+                }
+            }
+        };
+
+        const saveTeam = () => {
+            localStorage.setItem('standupTeam', members);
+            saveButton.innerHTML = 'save team';
+        };
+
+        // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+        const shuffleArray = (array) => {
+            let shuffledArray = array;
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+            }
+            return shuffledArray;
+        };
+
+        const copyToClipboard = (str) => {
+            console.log(str);
+            const el = document.createElement('textarea');
+            el.value = str;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        };
+
+        const copyOrder = () => {
+            let shuffledNames = document.querySelectorAll('.ordered-name');
+            let copyString = '';
+            for (let i = 0; i < shuffledNames.length; i++) {
+                copyString += `${i + 1}. ${shuffledNames[i].textContent} \n`;
+            }
+            copyToClipboard(copyString);
+        };
+
+        const randomInt = (min, max) => {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        const fetchQuestions = () => {
+            fetch("https://samfinston.github.io/standup/miitomo.json")
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error(`ERROR: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(json => {
+                    if(json.questions) 
+                        questions = json.questions;
+                }).catch(function (error) {
+                    console.log(error);
+                })
+        };
+
+        const getQuestion = () => {
+            if (!questionsToggled) {
+                questionsToggled = true
+                let resultsElement = document.querySelector('#results');
+                resultsElement.style.display = 'block';
+                let questionBlock = document.querySelector('#question-block');
+                questionBlock.style.display = 'block';
+            }
+
+            let p = document.querySelector('#question');
+            p.textContent = randomQuestion();
+        };
+
+        const randomQuestion = () => {
+            if (questions.length > 0) {
+                let q = questions[randomInt(0, questions.length)];
+                return "Q: " + q.replace(/\\/g, '');
+            } else {
+                return "Questions could not be loaded";
+            }
+        };
+
+        const copyQuestion = () => {
+            let p = document.querySelector('#question');
+            copyToClipboard(p.textContent);
+        };
+
+        window.onload = init;
+
+    </script>
+</body>
+
+</html>
