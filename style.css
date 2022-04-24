@@ -118,8 +118,12 @@ a {
     vertical-align: 15%;
 }
 
-#projects, #bio, #poetry, #journalism, #digital-poetics, #performance {
+#poetry {
     padding-top: 55px;
+}
+
+#projects, #bio, #journalism, #digital-poetics, #performance {
+    scroll-margin-top: 55px;
 }
 
 /* #endregion */
