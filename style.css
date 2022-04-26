@@ -649,7 +649,7 @@ footer>a {
         height: 180px;
     }
     .text-section {
-        padding: 16px;
+        padding: 0px 16px 16px 16px;
     }
     ul {
         padding-left: 16px;
