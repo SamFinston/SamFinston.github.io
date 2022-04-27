@@ -502,6 +502,15 @@ header {
     font-size: 9vw;
 }
 
+.paragraph-list-block {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.paragraph-list-block > * {
+    margin-top: 0;
+}
+
 /* #endregion */
 
 /* About */
@@ -668,6 +677,9 @@ footer>a {
     }
     #headshot {
         margin-right: 0;
+    }
+    .paragraph-list-block {
+        display: block;
     }
 }
 
