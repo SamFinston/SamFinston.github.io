@@ -1,13 +1,13 @@
 [
     {
-      "name": "Knight Move 3D",
-      "thumbnail": "https://samfinston.github.io/media/knightThumb.png",
-      "date" : ["December", 12, 2018],
-      "tags": ["game", "class", "team", "c++"],
-      "description": "A 3D recreation of Alexey Pajitnov's 1990 puzzle game 'Knight Move.' Players must maneuver their knight piece around a perilous board, pursuing hearts and avoiding the rival rook. <cite>Knight Move 3D</cite> was developed using C++ and OpenGL by a team of three. I was one of two programmers on the project",
-      "video": "7Ao0NrOcGY0",
+      "name": "Goofy Gauntlet",
+      "thumbnail": "https://samfinston.github.io/media/GoofyGauntlet.png",
+      "date" : ["December", 14, 2018],
+      "tags": ["game", "class", "solo", "unity", "c#"],
+      "description": "A twist on the classic dungeon crawler. Players take control of a fire-spitting goblin, clearing their dungeon of adventurers while reclaiming stolen treasure. I developed this game on my own over the course of a semester using Unity.",
+      "video": "3AJdOYJ9wkk",
       "links": {
-          "github": "https://github.com/MAClavell/Knight-Move-3D"
+          "itch.io": "https://coolsummit.itch.io/goofy-gauntlet"
       }
     },
     {
@@ -21,6 +21,17 @@
             "itch.io": "https://joms.itch.io/stellar-standoff"
         }
     },
+    {
+        "name": "Knight Move 3D",
+        "thumbnail": "https://samfinston.github.io/media/knightThumb.png",
+        "date" : ["December", 12, 2018],
+        "tags": ["game", "class", "team", "c++"],
+        "description": "A 3D recreation of Alexey Pajitnov's 1990 puzzle game 'Knight Move.' Players must maneuver their knight piece around a perilous board, pursuing hearts and avoiding the rival rook. <cite>Knight Move 3D</cite> was developed using C++ and OpenGL by a team of three. I was one of two programmers on the project",
+        "video": "7Ao0NrOcGY0",
+        "links": {
+            "github": "https://github.com/MAClavell/Knight-Move-3D"
+        }
+      },
     {
         "name": "VRn't",
         "thumbnail": "https://samfinston.github.io/media/VRntThumb.png",
