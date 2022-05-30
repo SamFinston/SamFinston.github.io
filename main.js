@@ -133,9 +133,9 @@ const openModal = (e) => {
     let index = thumbnails.indexOf(e.currentTarget);
     let project = projects[index];
     let viewModel = "";
-    // if(project.video) {
-    //     viewModel += `<iframe frameborder="0" allowfullscreen src="https://www.youtube-nocookie.com/embed/${project.video}"></iframe>`;
-    // }
+    if(project.video) {
+        viewModel += `<iframe frameborder="0" allowfullscreen src="https://www.youtube-nocookie.com/embed/${project.video}"></iframe>`;
+    }
     if (project.name) {
         viewModel += `<h1>${project.name}</h1>`
     }
