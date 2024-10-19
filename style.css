@@ -42,6 +42,13 @@ p, ul {
     color: var(--blue-1);
 }
 
+.msbg {
+    background-image: url("media/grid.svg"), linear-gradient(white, 5%, var(--blue-4), 95%, white);
+    background-size: 32px, 100%;
+    animation: scrollDown 4s linear infinite;
+    margin-left: 0;
+}
+
 h1 {
     font-family: baloo paaji;
     font-size: 2em;
@@ -118,11 +125,11 @@ a {
     vertical-align: 15%;
 }
 
-#poetry {
+#writing-about {
     padding-top: 55px;
 }
 
-#projects, #bio, #journalism, #digital-poetics, #performance {
+#projects, #bio, #journalism, #poetry, #etc, #digital-poetics {
     scroll-margin-top: 55px;
 }
 
@@ -552,7 +559,8 @@ header {
 }
 
 #headshot {
-    background-image: url("media/self.jpg");
+    background-image: url("media/egg.jpg");
+    background-size: cover;
     margin-right: 15px;
 }
 
