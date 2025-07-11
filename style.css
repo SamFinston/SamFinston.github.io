@@ -509,6 +509,34 @@ header {
     font-size: 9vw;
 }
 
+.writing-photo {
+    min-width: 200px;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    margin-left: 15px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--blue-1);
+    color: white;
+    text-decoration: none;
+}
+
+#nowadaysical-thumbnail {
+    background-image: url("media/nowadaysical.jpg");
+}
+
+#gov-center-thumbnail {
+    background-image: url("media/gov-center.jpeg");
+}
+
+.photo-paragraph-block {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: end;
+}
+
 .paragraph-list-block {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -686,8 +714,21 @@ footer>a {
     #headshot {
         margin-right: 0;
     }
-    .paragraph-list-block {
+    .paragraph-list-block, .photo-paragraph-block  {
         display: block;
+    }
+    .writing-photo {
+        margin: auto;
+    }
+    .section-header {
+        font-size: 2.5rem;
+    }
+    .subsection-header {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    p, ul {
+        font-size: 1.1rem;
     }
 }
 
