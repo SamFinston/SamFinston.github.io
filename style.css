@@ -40,6 +40,7 @@ p, ul {
 
 .subsection-header {
     color: var(--blue-1);
+    margin-bottom: 5px;
 }
 
 .msbg {
@@ -514,7 +515,8 @@ header {
     max-width: 200px;
     aspect-ratio: 1/1;
     background-size: cover;
-    margin-left: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -533,8 +535,17 @@ header {
 
 .photo-paragraph-block {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: end;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.writing-paragraph-block > p {
+    margin-top: 0;
+}
+
+.text-section > p {
+    margin-top: 0;
 }
 
 .paragraph-list-block {
@@ -719,6 +730,7 @@ footer>a {
     }
     .writing-photo {
         margin: auto;
+        margin-top: 20px;
     }
     .section-header {
         font-size: 2.5rem;
